@@ -29,8 +29,10 @@
 		"webpack-dev-server": "^3.9.0"
 	},
 	"dependencies": {
+		"aos": "^2.3.4",
 		"bootstrap": "^4.4.1",
 		"jquery": "^3.4.1",
+		"jump.js": "^1.0.2",
 		"popper.js": "^1.16.0"
 	}
 }

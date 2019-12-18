@@ -1,4 +1,5 @@
 **/dist
+**/img
 
 # Created by https://www.gitignore.io/api/vim,node,code,linux,macos,windows,webstorm,sublimetext
 # Edit at https://www.gitignore.io/?templates=vim,node,code,linux,macos,windows,webstorm,sublimetext

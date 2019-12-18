@@ -1,6 +1,25 @@
-body {
-	color: red;
+// bootstrap
+//@import "~bootstrap/scss/bootstrap";
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+* {
+	box-sizing: border-box;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-kerning: auto;
 }
 
-// bootstrap
-@import "~bootstrap/scss/bootstrap";
+html {
+	font-family: 'Open Sans', sans-serif;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;
+}
+
+@import "maps";
+@import "float-img";
+@import "scroll-indicator";
