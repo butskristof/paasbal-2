@@ -1,5 +1,5 @@
 @font-face {
-	src: url("/static/font/cooper.ttf");
+	src: url("../static/font/cooper.ttf");
 	font-family: cooper-black-std;
 	font-weight: bold;
 }
@@ -7,7 +7,7 @@
 $cooper-border: #591D22;
 
 html {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.0)), url("/static/img/bg.jpg");
+	background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.0)), url("../static/img/bg.jpg");
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
