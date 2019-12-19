@@ -64,6 +64,8 @@ module.exports = {
 		}),
 		new CopyWebpackPlugin([{
 			from: "./src/static", to: "static"
+		}, {
+			from: "./src/favicon", to: ""
 		}])
 	],
 	devServer: {
