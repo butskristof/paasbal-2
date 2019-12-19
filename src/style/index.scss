@@ -4,6 +4,13 @@
 	font-weight: bold;
 }
 
+@font-face {
+	src: url("../static/font/sign.woff2"),url("../static/font/sign.woff");
+	font-family: ccsignlanguage;
+	font-weight: 400;
+	font-style: normal;
+}
+
 $cooper-border: #591D22;
 
 html {
@@ -20,41 +27,59 @@ html {
 }
 
 #hero {
-	width: 100vw;
-	height: 100vh;
+	width: 100%;
+	height: 100%;
 	height: calc(var(--vh, 1vh) * 100);
 
-	padding-top: 5em;
-
 	display: flex;
-	flex: 1 1 0;
 	flex-flow: column nowrap;
-	place-content: stretch space-between;
-	align-items: center;
+	justify-content: space-between;
+	align-items: stretch;
+	align-content: center;
 
 	#hero-inner {
 		display: flex;
-		flex-grow: 1;
+		flex: 1;
 
 		flex-direction: column;
 		flex-wrap: nowrap;
-		align-content: stretch;
-		align-items: center;
 		justify-content: center;
+		align-items: stretch;
+		align-content: stretch;
 
 		#hero-logo {
 			transform: translatey(0px);
 			animation: float 6s ease-in-out infinite;
-		}
 
-		#hero-spacer {
-			margin: 1em auto;
+			flex: 1;
+			display: flex;
+			overflow: hidden;
+			position: relative;
+
+			img {
+				margin: auto;
+				max-height: 100%;
+				max-width: 100%;
+				position: absolute;
+				top:0;
+				left:0;
+				right:0;
+				bottom:0;
+			}
 		}
 
 		#hero-right {
 			font-family: cooper-black-std, sans-serif;
 			text-shadow: -2px 0 $cooper-border, 0 2px $cooper-border, 2px 0 $cooper-border, 0 -2px $cooper-border;
 			text-align: center;
+			overflow: hidden;
+
+			height: 10rem;
+			@media screen and (min-height: 740px){
+				height: 12rem;
+			}
+
+			color: #f2f2f3;
 
 			#hidden-title {
 				position: absolute;
@@ -66,6 +91,7 @@ html {
 			}
 
 			h2 {
+				font-family: ccsignlanguage, sans-serif;
 				font-size: 3rem;
 				margin-bottom: 0.4rem;
 			}
@@ -80,16 +106,13 @@ html {
 		}
 	}
 
-	img {
-		//width: 100%;
-		max-width: 100%;
-		max-height: 450px;
-	}
-
 	#scroll-indicator {
 		flex: 0 0 auto;
-		height: 20vh;
-		padding-top: 2em;
+		align-self: center;
+		//padding-top: 2em;
+
+		//height: 8rem;
+		padding-bottom: 2rem;
 	}
 }
 
