@@ -14,16 +14,18 @@
 $cooper-border: #591D22;
 
 html {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.0)), url("../static/img/bg.jpg");
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-
 	color: white;
+}
+
+#bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	/* Preserve aspect ratio */
+	min-width: 100%;
+	min-height: 100%;
+	z-index: -1;
 }
 
 #hero {
@@ -32,7 +34,8 @@ html {
 	height: calc(var(--vh, 1vh) * 100);
 
 	display: flex;
-	flex-flow: column nowrap;
+	flex-direction: column;
+	flex-wrap: nowrap;
 	justify-content: space-between;
 	align-items: stretch;
 	align-content: center;
@@ -42,6 +45,10 @@ html {
 		flex: 1;
 
 		flex-direction: column;
+		@media screen and (max-height: 500px){
+			margin-top: 2rem;
+			flex-direction: row;
+		}
 		flex-wrap: nowrap;
 		justify-content: center;
 		align-items: stretch;
@@ -68,11 +75,15 @@ html {
 			}
 		}
 
-		#hero-right {
+		#hero-info {
 			font-family: cooper-black-std, sans-serif;
 			text-shadow: -2px 0 $cooper-border, 0 2px $cooper-border, 2px 0 $cooper-border, 0 -2px $cooper-border;
 			text-align: center;
 			overflow: hidden;
+			align-self: center;
+			@media screen and (max-height: 500px){
+				margin-right: 2rem;
+			}
 
 			height: 10rem;
 			@media screen and (min-height: 740px){
