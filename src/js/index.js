@@ -34,27 +34,27 @@ function fillYear() {
 function fillDJs() {
 	const djs = [
 		{
-			name: "Sample", stage: "main", img: "http://loremflickr.com/500/500?random=1"
+			name: "Sample", stage: "main", img: "sample.jpg"
 		}, {
-			name: "Manuals", stage: "main", img: "http://loremflickr.com/500/500?random=2"
+			name: "Manuals", stage: "main", img: "manuals.jpg"
 		}, {
-			name: "Milano", stage: "main", img: "http://loremflickr.com/500/500?random=3"
+			name: "Milano", stage: "main", img: "milano.jpg"
 		}, {
-			name: "Hypesquad", stage: "main", img: "http://loremflickr.com/500/500?random=3"
+			name: "Hypesquad", stage: "main", img: "hypesquad.jpg"
 		}, {
-			name: "MTOW", stage: "main", img: "http://loremflickr.com/500/500?random=3"
+			name: "MTOW", stage: "main", img: "mtow.jpg"
 		}, {
-			name: "Project A", stage: "main", img: "http://loremflickr.com/500/500?random=3"
+			name: "Project A", stage: "main", img: "projecta.jpg"
 		}, {
-			name: "DJ Jelle", stage: "feest"
+			name: "DJ Jelle", stage: "feest", img: "jelle.jpg"
 		}, {
-			name: "DB All Music", stage: "feest"
+			name: "DB All Music", stage: "feest", img: "allmusic.jpg"
 		}, {
-			name: "Pan & Cook", stage: "techno"
+			name: "Sawkee", stage: "techno", img: "sawkee.jpg"
 		}, {
-			name: "Sawkee", stage: "techno"
+			name: "Verbov", stage: "techno", img: "verbov.jpg"
 		}, {
-			name: "Verbov", stage: "techno"
+			name: "Pan & Cook", stage: "techno", img: "pancook.jpg"
 		}
 	];
 
@@ -64,9 +64,10 @@ function fillDJs() {
 	lineups["techno"] = document.querySelector("#lineup-techno");
 	djs.forEach(dj => {
 		const el = document.createElement("div");
-		el.innerHTML = `<img src="http://lorempixel.com/500/500?random=${dj.name}" alt="${dj.name}" /><p>${dj.name}</p>`;
+		el.innerHTML = `<img src="static/img/dj/${dj.img}" alt="${dj.name}" /><p>${dj.name}</p>`;
 		el.className = "lineup-img";
 		el.setAttribute("data-aos", "fade-up");
+		el.setAttribute("data-aos-placement", "center-bottom");
 		lineups[dj.stage].appendChild(el);
 	});
 }
