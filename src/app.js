@@ -1,7 +1,6 @@
 import {} from "./js/index";
 
 import "./style/app.scss";
-// import "bootstrap";
 
 // Get the viewport height and multiply it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
